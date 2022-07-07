@@ -259,16 +259,16 @@
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">set_default_device</span><span class="p">(</span><span class="s2">&quot;gpu:0&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device</span><span class="p">()</span>
-<span class="go">&quot;gpu:0&quot;</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">unset_default_device</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device</span><span class="p">()</span>
-<span class="go">&quot;cpu&quot;</span>
-</pre></div>
-</div>
+<p>A “gpu” as device:
+&gt;&gt;&gt; with ivy.DefaultDevice(“gpu”) as device:
+&gt;&gt;&gt;     # with block calls device.__exit__()
+&gt;&gt;&gt;     print(device._dev)
+“cpu”</p>
+<p>A “tpu” as device:
+&gt;&gt;&gt; with ivy.DefaultDevice(“tpu”) as device:
+&gt;&gt;&gt;     # with block calls device.__exit__()
+&gt;&gt;&gt;     print(device._dev)
+“cpu”</p>
 </dd></dl>
 
 <dl class="py method">
