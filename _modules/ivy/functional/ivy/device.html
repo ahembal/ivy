@@ -211,14 +211,16 @@
 <span class="sd">        --------</span>
 <span class="sd">        A &quot;gpu&quot; as device:</span>
 <span class="sd">        &gt;&gt;&gt; with ivy.DefaultDevice(&quot;gpu&quot;) as device:</span>
-<span class="sd">        &gt;&gt;&gt;     # with block calls device.__exit__()</span>
-<span class="sd">        &gt;&gt;&gt;     print(device._dev)</span>
+<span class="sd">        &gt;&gt;&gt;     pass</span>
+<span class="sd">        &gt;&gt;&gt; # after with block device.__exit__() is called</span>
+<span class="sd">        &gt;&gt;&gt; print(device._dev)</span>
 <span class="sd">        &quot;cpu&quot;</span>
 
 <span class="sd">        A &quot;tpu&quot; as device:</span>
 <span class="sd">        &gt;&gt;&gt; with ivy.DefaultDevice(&quot;tpu&quot;) as device:</span>
-<span class="sd">        &gt;&gt;&gt;     # with block calls device.__exit__()</span>
-<span class="sd">        &gt;&gt;&gt;     print(device._dev)</span>
+<span class="sd">        &gt;&gt;&gt;     pass</span>
+<span class="sd">        &gt;&gt;&gt; # after with block device.__exit__() is called</span>
+<span class="sd">        &gt;&gt;&gt; print(device._dev)</span>
 <span class="sd">        &quot;cpu&quot;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>

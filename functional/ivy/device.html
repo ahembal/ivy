@@ -204,13 +204,15 @@
 <p class="rubric">Examples</p>
 <p>A “gpu” as device:
 &gt;&gt;&gt; with ivy.DefaultDevice(“gpu”) as device:
-&gt;&gt;&gt;     # with block calls device.__exit__()
-&gt;&gt;&gt;     print(device._dev)
+&gt;&gt;&gt;     pass
+&gt;&gt;&gt; # after with block device.__exit__() is called
+&gt;&gt;&gt; print(device._dev)
 “cpu”</p>
 <p>A “tpu” as device:
 &gt;&gt;&gt; with ivy.DefaultDevice(“tpu”) as device:
-&gt;&gt;&gt;     # with block calls device.__exit__()
-&gt;&gt;&gt;     print(device._dev)
+&gt;&gt;&gt;     pass
+&gt;&gt;&gt; # after with block device.__exit__() is called
+&gt;&gt;&gt; print(device._dev)
 “cpu”</p>
 </dd></dl>
 
